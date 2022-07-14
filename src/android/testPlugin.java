@@ -16,7 +16,7 @@ public class testPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("toast")) {
             String message = args.getString(0);
-            android.widget.Toast.makeText(cordova.getActivity().getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+            android.widget.Toast.makeText(cordova.getActivity().getApplicationContext(), message, android.widget.Toast.LENGTH_SHORT).show();
             
             this.coolMethod(message, callbackContext);
             return true;
